@@ -1,0 +1,73 @@
+1.1.3 Aug-23-2012
+----------------
+- allow decoding of empty object identifiers
+
+1.1.2 Mai-14-2012
+----------------
+- improved efficiency in BerVisibleString
+- modified BerBitString so it can be empty when decoded
+
+1.1.1 Feb-20-2012
+----------------
+- fix in BerIdentifier.decodeAndCheck(), thanks to Mr.Bostijancic from TU-Wien
+
+1.1.0 Feb-14-2012
+----------------
+
+- the default tagging can now be changed to implicit using the
+  following kind of statement: SAMPLE DEFINITIONS IMPLICIT TAGS ::=
+  ...
+
+- the character '-' is now replaced by the '_' character in the name
+  of Java classes
+
+- support for indefinit length when decoding (not for encoding), has
+  to explicitely enabled using the -il option
+
+- SEQUENCE elements of type CHOICE that have not explicit tag are now
+  supported by jASN1
+
+- CHOICEs can now have sub CHOICES without tags. Only a warning is
+  printed that this could one CHOICE could be integrated into another
+  for better performance
+
+1.0.7 Feb-6-2012
+----------------
+- minor changes to gradle build file
+- bug fix in decoding empty OctetString
+
+1.0.6 Feb-1-2012
+----------------
+- added a Windows batch file to execute jasn1-compiler in Windows
+
+1.0.5 Jan-30-2012
+-----------------
+- fixed another bug in decoding of negative numbers
+
+1.0.4 Jan-27-2012
+-----------------
+- fixed bug in decoding of negative integers in BerInteger
+
+1.0.3 Jan-19-2012
+-----------------
+- modified BerByteArrayOutputStream so its buffer and index are public and added two new constructors
+
+1.0.2 Jan-17-2012
+-----------------
+- added BerBitString(byte[]) constructor
+
+1.0.1 Jan-13-2012
+-----------------
+- fixed bug in coding of several byte length field
+
+1.0.0 Dec-06-2011
+-----------------
+- added getByteBuffer() function for BerByteArrayOutputStream so arrays don't always have to be copied
+- add code byte array and encodeAndSave function to all structures for better encoding performance when
+  encoding the same structure several times 
+- numerous bug fixes
+- all basic types are now supported
+
+0.9.0 Nov-21-2011
+-----------------
+- first version
