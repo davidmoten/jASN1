@@ -55,7 +55,6 @@ configure(subprojects) {
 
         pom.withXml {
           def root = asNode();
-          root.appendNode( 'name', subProject.pomName() )
           root.appendNode( 'url', 'http://www.openmuc.org/' )
           def jira = root.appendNode( 'issueManagement' )
           jira.appendNode( 'system', 'github' )
